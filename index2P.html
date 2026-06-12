@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Notas Conceptuales 2026</title>
+    <link rel="stylesheet" href="./CSS/styles2P.css">
+</head>
+<body>
+
+    <header>
+        <h1>Unidad de Gestión de Vinculación con la Sociedad</h1>
+        <h2>Registro de Nota Conceptual de Proyecto</h2>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <form id="notaConceptualForm" novalidate>
+                
+                <fieldset>
+                    <legend>1. Datos Generales del Proyecto</legend>
+                    <div class="form-group">
+                        <label for="nombreProyecto">Nombre del Proyecto *</label>
+                        <input type="text" id="nombreProyecto" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sede">Sede o Unidad Académica Especial *</label>
+                            <input type="text" id="sede" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="departamento">Departamento *</label>
+                            <input type="text" id="departamento" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fechaInicio">Fecha de Inicio Planificada *</label>
+                            <input type="date" id="fechaInicio" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaFin">Fecha de Finalización Planificada *</label>
+                            <input type="date" id="fechaFin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="plazoEjecucion">Plazo de Ejecución (Meses)</label>
+                            <input type="number" id="plazoEjecucion" min="1">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Localización</legend>
+                    <div class="form-group">
+                        <label>Cobertura * (Seleccione al menos una)</label>
+                        <div class="checkbox-group" id="coberturaGroup">
+                            <label><input type="checkbox" name="cobertura" value="Internacional"> Internacional</label>
+                            <label><input type="checkbox" name="cobertura" value="Nacional"> Nacional</label>
+                            <label><input type="checkbox" name="cobertura" value="Provincial"> Provincial</label>
+                            <label><input type="checkbox" name="cobertura" value="Cantonal"> Cantonal</label>
+                            <label><input type="checkbox" name="cobertura" value="Parroquial"> Parroquial</label>
+                            <label><input type="checkbox" name="cobertura" value="Barrio/Comunidad"> Barrio o Comunidad</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="provincia">Provincia *</label><input type="text" id="provincia" required></div>
+                        <div class="form-group"><label for="canton">Cantón *</label><input type="text" id="canton" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="parroquia">Parroquia *</label><input type="text" id="parroquia" required></div>
+                        <div class="form-group"><label for="barrio">Barrio o Comunidad *</label><input type="text" id="barrio" required></div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Sector de la Población Beneficiaria</legend>
+                    <div class="form-group">
+                        <label>Sector * (Seleccione al menos uno)</label>
+                        <div class="checkbox-group" id="sectorGroup">
+                            <label><input type="checkbox" name="sector" value="Urbano Marginal"> Urbano Marginal</label>
+                            <label><input type="checkbox" name="sector" value="Rural"> Rural</label>
+                            <label><input type="checkbox" name="sector" value="Grupo de atención prioritaria"> Grupo de atención prioritaria</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Alineamiento y Ámbito Prioritario</legend>
+                    <div class="form-group">
+                        <label>Ámbito Prioritario de Actuación *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="ambito" value="Desarrollo Territorial y Fortalecimiento Comunitario"> Desarrollo Territorial y Fortalecimiento Comunitario</label>
+                            <label><input type="radio" name="ambito" value="Sostenibilidad Ambiental y Green University"> Sostenibilidad Ambiental y Green University</label>
+                            <label><input type="radio" name="ambito" value="Innovación Social y Resiliencia Territorial"> Innovación Social y Resiliencia Territorial</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>5. Objetivos de Desarrollo Sostenible (ODS)</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ods">ODS Seleccionado *</label>
+                            <select id="ods" required>
+                                <option value="">-- Seleccione un ODS --</option>
+                                <option value="ODS 1: Fin de la Pobreza">ODS 1: Fin de la Pobreza</option>
+                                <option value="ODS 4: Educación de Calidad">ODS 4: Educación de Calidad</option>
+                                <option value="ODS 9: Industria, Innovación e Infraestructura">ODS 9: Industria, Innovación e Infraestructura</option>
+                                <option value="ODS 13: Acción por el Clima">ODS 13: Acción por el Clima</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="metaOds">Meta ODS *</label>
+                            <input type="text" id="metaOds" required placeholder="Ej. Meta 4.1">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>6 al 10. Clasificación y Vinculación Institucional</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group"><label for="cineAmplio">CINE Campo Amplio *</label><input type="text" id="cineAmplio" required></div>
+                        <div class="form-group"><label for="cineEspecifico">CINE Campo Específico *</label><input type="text" id="cineEspecifico" required></div>
+                        <div class="form-group"><label for="cineDetallado">CINE Campo Detallado *</label><input type="text" id="cineDetallado" required></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group"><label for="pndObjetivo">Objetivo PND *</label><input type="text" id="pndObjetivo" required></div>
+                        <div class="form-group"><label for="pndPolitica">Política PND *</label><input type="text" id="pndPolitica" required></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group"><label for="peiObjetivo">Objetivo Estratégico PEI *</label><input type="text" id="peiObjetivo" required></div>
+                        <div class="form-group"><label for="peiEstrategia">Estrategia PEI *</label><input type="text" id="peiEstrategia" required></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group"><label for="invPrincipal">Línea Investigación Principal *</label><input type="text" id="invPrincipal" required></div>
+                        <div class="form-group"><label for="invSecundaria">Línea Investigación Secundaria *</label><input type="text" id="invSecundaria" required></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group"><label for="domInstitucional">Dominio Institucional *</label><input type="text" id="domInstitucional" required></div>
+                        <div class="form-group"><label for="domAcademico">Dominio Académico *</label><input type="text" id="domAcademico" required></div>
+                    </div>
+                </fieldset>
+
+                <div id="errorContainer" class="error-box hidden"></div>
+
+                <div class="actions">
+                    <button type="button" id="btnGuardar">Guardar Nota Conceptual</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="resumenSection" class="resumen-section hidden">
+            <h3>Resumen de la Nota Conceptual Registrada</h3>
+            <div id="resumenContenido"></div>
+        </section>
+    </main>
+
+    <script src="./JS/app.js"></script>
+</body>
+</html>
